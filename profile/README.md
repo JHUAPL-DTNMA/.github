@@ -1,0 +1,4 @@
+This organization hosts repositories, issue tracking, and planning related to reference implementations of the DTN Management Architecture (DTNMA) in various languages for various runtime environments.
+
+The DTNMA is defined in [draft-ietf-dtn-dtnma](https://www.ietf.org/archive/id/draft-ietf-dtn-dtnma-14.html) with lower-level structural and behavioral Application Management Model (AMM) defined in [draft-ietf-dtn-amm](https://www.ietf.org/archive/id/draft-ietf-dtn-amm-01.html).
+The encoding of managed data is accomplished by Application Resource Identifiers (ARI), defined in [draft-ietf-dtn-ari](https://www.ietf.org/archive/id/draft-ietf-dtn-ari-02.html), and encoding of Application Data Models (ADMs) defeind in [draft-ietf-dtn-adm-yang](https://www.ietf.org/archive/id/draft-ietf-dtn-adm-yang-01.html).
