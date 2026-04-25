@@ -1,10 +1,10 @@
 #!/bin/bash
 ##
-## Copyright (c) 2011-2026 The Johns Hopkins University Applied Physics
+## Copyright (c) 2024-2026 The Johns Hopkins University Applied Physics
 ## Laboratory LLC.
 ##
 ## This file is part of the Delay-Tolerant Networking Management
-## Architecture (DTNMA) Tools package.
+## Architecture (DTNMA) documentation project.
 ##
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.
