@@ -1,4 +1,4 @@
-name: Source formatting
+name: Spellcheck documentation
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
     - cron: '20 8 * * 4'
 
 jobs:
-  license-marking:
+  spellcheck:
     permissions:
       contents: read
     runs-on: ubuntu-24.04
@@ -22,13 +22,7 @@ jobs:
       - name: Set up OS
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-pip
-          pip3 install licenseheaders
-      - name: Check formatting
-        run: |
-          ./apply_license.sh
-          if ! git diff --quiet; then
-            echo "Error: Files changed after formatting:"
-            git diff
-            exit 1
-          fi
+          sudo apt-get install -y \
+              aspell
+      - name: Validate
+        run: ./spellcheck.sh $(find . -iname '*.md')
