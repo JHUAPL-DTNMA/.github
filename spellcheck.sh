@@ -1,0 +1,71 @@
+#!/bin/bash
+##
+## Copyright (c) 2024-2026 The Johns Hopkins University Applied Physics
+## Laboratory LLC.
+##
+## This file is part of the Delay-Tolerant Networking Management
+## Architecture (DTNMA) documentation project.
+##
+## Licensed under the Apache License, Version 2.0 (the "License");
+## you may not use this file except in compliance with the License.
+## You may obtain a copy of the License at
+##     http://www.apache.org/licenses/LICENSE-2.0
+## Unless required by applicable law or agreed to in writing, software
+## distributed under the License is distributed on an "AS IS" BASIS,
+## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+## See the License for the specific language governing permissions and
+## limitations under the License.
+##
+set -e
+
+USAGE="Usage: $0 [filename] {... filename}"
+if [ "$#" -eq "0" ]; then
+    echo "$USAGE"
+    exit 1
+fi
+
+SELFDIR=$(readlink -f $(dirname "${BASH_SOURCE[0]}"))
+
+# Check a single source
+# Arguments:
+#  1: The file path to check
+#
+function spellcheck {
+    FILEPATH=$1
+    shift
+
+    if [ ! -f "${FILEPATH}" ]; then
+        echo "File is missing: ${FILEPATH}" >/dev/stderr
+        return 1
+    fi
+
+    EXT=${FILEPATH##*.}
+    OUTPATH=${FILEPATH%.${EXT}}.misspelling.txt
+
+    echo "Checking ${FILEPATH}"
+    if [ "$EXT" = "md" ]; then
+        aspell --mode=markdown --lang=EN_US \
+               --extra-dicts=./dictionary.cwl list <"${FILEPATH}" | \
+            sort -u >"${OUTPATH}"
+    fi
+    if [[ -s "${OUTPATH}" ]]
+    then
+        echo "Output in ${OUTPATH}"
+        cat "${OUTPATH}"
+        return 1
+    else
+        rm "${OUTPATH}"
+    fi
+}
+
+aspell --lang=en create master "${SELFDIR}/dictionary.cwl" <"${SELFDIR}/dictionary.txt"
+
+ERRCOUNT=0
+for FILEPATH in "$@"
+do
+    if ! spellcheck "${FILEPATH}"
+    then
+        ERRCOUNT=$(($ERRCOUNT + 1))
+    fi
+done
+exit ${ERRCOUNT}
