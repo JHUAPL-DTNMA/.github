@@ -1,0 +1,15 @@
+# Jekyll settings
+title: DTNMA Documentation
+email: dtnma-support@jhuapl.edu
+description: >
+  Extra documentation for the Delay-Tolerant Network Management Architecture (DTNMA)
+  supporting its specifications, reference implementations, data models and modules,
+  model author guidance, and examples.
+baseurl: "/.github" # the subpath of the site
+url: "https://jhuapl-dtnma.github.io/dtnma-ace/"
+github_username: JHUAPL-DTNMA
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: /:year/:title:output_ext
