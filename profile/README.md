@@ -17,7 +17,7 @@ limitations under the License.
 -->
 This organization hosts repositories, issue tracking, and planning related to reference implementations of the DTN Management Architecture (DTNMA) in various languages for various runtime environments.
 
-Formal specifications are managed by the IETF and its [Datatracker tool](https://datatracker.ietf.org/doc/search?name=dtnma).
+Formal specifications are managed by the IETF and its [Datatracker tool](https://datatracker.ietf.org/doc/search?name=DTNMA&sort=&rfcs=on&activedrafts=on).
 Additional explanations are provided by the [DTNMA Documentation](https://jhuapl-dtnma.github.io/.github/) project, including an introductory explanation with examples.
 
 The repositories in this organization include:
