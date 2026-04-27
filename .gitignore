@@ -2,6 +2,7 @@
 *~
 /dictionary.cwl
 *.misspelling.txt
+.project
 
 #Jekyll
 _site
