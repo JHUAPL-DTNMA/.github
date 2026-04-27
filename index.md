@@ -1,5 +1,5 @@
 ---
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: Welcome
 layout: home
 ---
 <!--
@@ -19,8 +19,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-# Welcome
-
 This project hosts [DTNMA 101](dtnma-101/) introductory explanations as well as descriptions of and links to external specifications and other resources.
 
 The Delay-Tolerant Network Management Architecture (DTNMA) is defined by the IETF in informational [RFC 9675](https://www.rfc-editor.org/rfc/rfc9675.html).
