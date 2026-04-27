@@ -1,3 +1,7 @@
+---
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
+---
 <!--
 Copyright (c) 2024-2026 The Johns Hopkins University Applied Physics
 Laboratory LLC.
@@ -15,10 +19,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
----
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
----
 
 The Delay-Tolerant Network Management Architecture (DTNMA) is defined by the IETF in informational [RFC 9675](https://www.rfc-editor.org/rfc/rfc9675.html).
 The detailed structural and behavioral model for Agents and Managers, the Application Management Model (AMM), is defined in [draft-ietf-dtn-amm](https://datatracker.ietf.org/doc/draft-ietf-dtn-amm/).

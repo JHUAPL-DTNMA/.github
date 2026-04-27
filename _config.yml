@@ -24,12 +24,10 @@ description: >
   supporting its specifications, reference implementations,
   data models and modules.
 baseurl: "/.github" # the subpath of the site
-url: "https://jhuapl-dtnma.github.io/dtnma-ace/"
+url: "https://jhuapl-dtnma.github.io/"
 github_username: JHUAPL-DTNMA
 
 # Build settings
 permalink: /:year/:title:output_ext
 markdown: kramdown
 theme: minima
-sass:
-  quiet_deps: true
