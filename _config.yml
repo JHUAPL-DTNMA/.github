@@ -29,5 +29,6 @@ github_username: JHUAPL-DTNMA
 
 # Build settings
 permalink: /:year/:title:output_ext
+plugins: []
 markdown: kramdown
 theme: minima
