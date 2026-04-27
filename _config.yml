@@ -22,7 +22,7 @@ email: dtnma-support@jhuapl.edu
 description: >
   Extra documentation for the DTNMA
   supporting its specifications, reference implementations,
-  data models and modules.
+  data models and ADM modules.
 baseurl: "/.github" # the subpath of the site
 url: "https://jhuapl-dtnma.github.io/"
 github_username: JHUAPL-DTNMA
