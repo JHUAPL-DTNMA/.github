@@ -17,5 +17,11 @@ limitations under the License.
 -->
 This organization hosts repositories, issue tracking, and planning related to reference implementations of the DTN Management Architecture (DTNMA) in various languages for various runtime environments.
 
-The DTNMA is defined in [draft-ietf-dtn-dtnma](https://www.ietf.org/archive/id/draft-ietf-dtn-dtnma-14.html) with lower-level structural and behavioral Application Management Model (AMM) defined in [draft-ietf-dtn-amm](https://www.ietf.org/archive/id/draft-ietf-dtn-amm-01.html).
-The encoding of managed data is accomplished by Application Resource Identifiers (ARI), defined in [draft-ietf-dtn-ari](https://www.ietf.org/archive/id/draft-ietf-dtn-ari-02.html), and encoding of Application Data Models (ADMs) defeind in [draft-ietf-dtn-adm-yang](https://www.ietf.org/archive/id/draft-ietf-dtn-adm-yang-01.html).
+Formal specifications are managed by the IETF and its [Datatracker tool](https://datatracker.ietf.org/doc/search?name=dtnma).
+Additional explanations are provided by the [DTNMA Documentation](https://jhuapl-dtnma.github.io/.github/) project, including an introductory explanation with examples.
+
+The repositories in this organization include:
+
+- A C11 [reference implementation](https://github.com/JHUAPL-DTNMA/dtnma-tools) of [ARI processing (CACE)](https://jhuapl-dtnma.github.io/dtnma-tools/html/cace.html) with a command-line tool [`cace_ari`](https://jhuapl-dtnma.github.io/dtnma-tools/html/cace_ari.html), a [reference agent (REFDA)](https://jhuapl-dtnma.github.io/dtnma-tools/html/refda.html), and a [reference manager (REFDM)](https://jhuapl-dtnma.github.io/dtnma-tools/html/refdm.html) all available for use as staic or shared libraries. These include example daemons for specific test transport bindings (for example, local Unix domain sockets).
+- The [AMM Codec Engine (ACE)](https://github.com/JHUAPL-DTNMA/dtnma-ace) with [Python API](https://jhuapl-dtnma.github.io/dtnma-ace/) and command-line tools `ace_adm` and [`ace_ari`](https://jhuapl-dtnma.github.io/dtnma-ace/ace_ari.html).
+- A template-based code generator [CAMP](https://github.com/JHUAPL-DTNMA/dtnma-camp) which generates C11 source for the REFDA and SQL DDL source for the REFDM.
